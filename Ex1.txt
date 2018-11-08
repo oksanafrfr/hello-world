@@ -1,0 +1,18 @@
+<?php
+print "<table border = \"1\">\n";
+$p=6;
+for ($i=1;$i<=100;$i++){
+if ($i % $p == 1) {
+print "\t<tr>\n";
+}
+/* if ($i=100){
+print "\t\t<td colspan=3>$i</td>\n";
+}*/
+print "\t\t<td>$i</td>\n";
+if ($i % $p == 0) {
+print "\t</tr>\n";
+}
+}
+print "</table>";
+
+?>

@@ -1,0 +1,36 @@
+<?php
+$m=90; /*количество чисел в таблице*/
+$c=2; /*каждоё чётное число будем красить в красный*/
+$p=9; /*в каждой строке будет по 8 цифр*/
+function getColorMarkup($i, $c){
+    if($i%$c==0){
+        $num = "<span style=\"color: red;\"> $i </style>";
+        }
+else{
+    $num = $i;
+    }
+    return $num;
+}
+function getColspanMarkup($i, $m, $p){
+    if($i!=$m){
+        $colspan="";
+        }
+    else{
+        $colspan= ' colspan="100"'; /*я нашла только как colspan склеивает ячейки с помощью цифры, но не через переменную, поэтому просто взяла большое число*/
+    }
+    return $colspan;
+}
+$output="<table border = '1'>\n";
+for($i=1; $i<=$m ; $i++){
+    if($i%$p==1){
+        $output.="\t<tr>\n";
+        }
+    $num=getColorMarkup($i, $c);
+    $colspan=getColspanMarkup($i, $m, $p);
+    $output.="\t\t<td $colspan>$num</td>\n";
+    if($i % $p==0 || $i == $m){
+        $output.="\t</tr>\n";
+        }
+}
+print "$output";
+?>

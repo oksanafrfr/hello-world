@@ -22,6 +22,8 @@
         echo '<td>'.$row['quantity'].'</td>';
         echo '<td>'.$row['cost'].'</td></tr>';
     }
+$sum=123;
+    echo '<tr><td colspan=4>'.$sum.'</td></tr>';
     print "</table>";
 ?>
 </pre>

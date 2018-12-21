@@ -22,8 +22,8 @@
         echo '<td>'.$row['quantity'].'</td>';
         echo '<td>'.$row['cost'].'</td></tr>';
     }
-$sum=123;
-    echo '<tr><td colspan=4>'.$sum.'</td></tr>';
+    $sum = $pdo->query('SELECT SUM(quantity * price) as x FROM  `112_tts_bill_content` ');
+    echo '<tr><td colspan=4>'.$sum->fetch()['x'].'</td></tr>';
     print "</table>";
 ?>
 </pre>

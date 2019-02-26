@@ -1,0 +1,10 @@
+div {
+  font-family: sans-serif;
+  background-color: #d0e5ef;
+  font-size: 40px;
+  padding: 30px 30px 3px 30px;
+  width: 730px;
+}
+.fio, .name{text-align: center; }
+.fio{color: blue;}
+.week{float: right;}

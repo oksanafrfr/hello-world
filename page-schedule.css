@@ -1,0 +1,20 @@
+div > div {
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 7px 7px 7px 7px;
+  width: 15%;
+}
+
+.time, .day, .fio, .name{text-align: center; }
+.time, .day{font-weight:bold;}
+.fio{color: blue;}
+.week{float: right;}
+.flex {
+  display: flex;
+}
+.lec{background-color: #e0ffe0;}
+.pr{background-color: #d0e5ef;}
+.grey{background-color: #DCDCDC;}
+.time{font-family: sans-serif;
+  font-size: 14px;
+  width: 50px;}

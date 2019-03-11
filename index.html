@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      window.addEventListener("load", function() {
+        var menu = document.querySelector(".menu");
+        menu.addEventListener("click", function(event) {
+          if (event.target.classList.contains("menu-btn")) {
+            menu.className =
+              "menu menu--color--" + event.target.dataset.colorId;
+            menu
+              .querySelector(".menu-btn--active")
+              .classList.remove("menu-btn--active");
+            event.target.classList.add("menu-btn--active");
+          }
+        });
+      });
+    </script>
+
+    <style>
+      /* Put your code here */
+      .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .menu-btn {
+        background: #ffffff;
+        width: 100%;
+        border: none;
+        transition-duration: 2s;
+        color: var(--color-1);
+      }
+      .menu-btn--active {
+        color: white;
+        background-color: var(--color-1);
+        box-shadow: 0 0 10px black;
+      }
+      .menu--color--1 {
+        background-color: #dc143c;
+        color: #dc143c;
+      }
+      .menu--color--2 {
+        background-color: #4169e1;
+        color: #4169e1;
+      }
+      .menu--color--3 {
+        background-color: #000000;
+        color: #000000;
+      }
+      .menu--color--4 {
+        background-color: #3cb371;
+        color: #3cb371;
+      }
+      @media all and (max-width: 768px) {
+        .menu {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+        .menu-btn {
+          padding: 20px;
+          font-size: 20pt;
+        }
+        .menu-item:nth-last-child(-n + 3) {
+          margin-bottom: 3px;
+        }
+        --color-1: #dc143c;
+        --color-2: #4169e1;
+        --color-3: #000000;
+        --color-4: #3cb371;
+      }
+      @media all and (min-width: 768px) and (max-width: 1240px) {
+        .menu {
+          display: flex;
+          justify-content: space-between;
+        }
+        .menu-item {
+          flex-grow: 1;
+          font-size: 18pt;
+        }
+        .menu-item:nth-child(-n + 3) {
+          margin-right: 3px;
+        }
+        .menu-btn {
+          padding: 15px;
+        }
+        --color-1: #dc143c;
+        --color-2: #4169e1;
+        --color-3: #000000;
+        --color-4: #3cb371;
+        .menu-item {
+          flex-grow: 1;
+        }
+      }
+      @media all and (min-width: 1240px) {
+        .menu {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .menu-btn {
+          padding: 10px;
+          width: 150px;
+          margin-left: 3px;
+        }
+        --color-1: #dc143c;
+        --color-2: #4169e1;
+        --color-3: #000000;
+        --color-4: #3cb371;
+        .menu-item {
+          margin: 0;
+        }
+        body {
+          float: right;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="menu menu--color--2">
+      <li class="menu-item">
+        <button class="menu-btn" data-color-id="1">Color Schema #1</button>
+      </li>
+      <li class="menu-item">
+        <button class="menu-btn menu-btn--active" data-color-id="2">
+          Color Schema #2
+        </button>
+      </li>
+      <li class="menu-item">
+        <button class="menu-btn" data-color-id="3">Color Schema #3</button>
+      </li>
+      <li class="menu-item">
+        <button class="menu-btn" data-color-id="4">Color Schema #4</button>
+      </li>
+    </ul>
+  </body>
+</html>

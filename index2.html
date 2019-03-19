@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Notifications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      window.addEventListener('load', function () {
+        var notifications = document.querySelector('.notifications');
+        var notificationHTML = document.querySelector('.notification').outerHTML;
+        document.querySelector('.notification').remove();
+        
+        var iterator = 1;
+        (function addItem() {
+        	if (iterator > 5) {
+        		notifications.removeChild(notifications.children[0]);
+        	}
+        
+        	const item = document.createElement('div');
+        	notifications.appendChild(item);
+        	item.outerHTML = notificationHTML.replace('#{number}', '#' + iterator);
+        	iterator += 1;
+        
+        	setTimeout(addItem, Math.random() * 4000);
+        })();
+      });
+    </script>
+
+    <style>
+      @keyframes grr {
+      	0% {transform: translateX(70px) scaleX(0);}
+      	25% {transform: translateX(0px) scaleX(1);}
+      	50% {transform: translateY(-75px) scaleX(1);}
+      	75% {transform: translateY(-150px) scaleX(1);}
+      	100% {transform: translateY(-225px) scaleX(1);}
+      }
+        @keyframes vrr {
+      	0% {transform: translateY(0px);}
+      	25% {transform: translateY(0px);}
+      	50% {transform: translateY(-75px);}
+      	75% {transform: translateY(-150px);}
+      	100% {transform: translateY(-225px);}
+      }
+      .notifications {
+    /*  	animation: vrr 9s;*/
+      }
+      div > div{  
+      	padding: 20px 0 0 10px;
+      	animation: grr 3s forwards;
+      	position: relative;
+  margin: 0;
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid grey;}
+    </style>
+  </head>
+  <body>
+    <div class="notifications"></div>
+    <div class="notification">Notification #{number}</div>
+  </body>
+</html>

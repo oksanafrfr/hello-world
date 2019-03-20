@@ -5,54 +5,62 @@
     <title>Notifications</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      window.addEventListener('load', function () {
-        var notifications = document.querySelector('.notifications');
-        var notificationHTML = document.querySelector('.notification').outerHTML;
-        document.querySelector('.notification').remove();
-        
+      window.addEventListener("load", function() {
+        var notifications = document.querySelector(".notifications");
+        var notificationHTML = document.querySelector(".notification")
+          .outerHTML;
+        document.querySelector(".notification").remove();
+
         var iterator = 1;
         (function addItem() {
-        	if (iterator > 5) {
-        		notifications.removeChild(notifications.children[0]);
-        	}
-        
-        	const item = document.createElement('div');
-        	notifications.appendChild(item);
-        	item.outerHTML = notificationHTML.replace('#{number}', '#' + iterator);
-        	iterator += 1;
-        
-        	setTimeout(addItem, Math.random() * 4000);
+          if (iterator > 5) {
+            notifications.removeChild(notifications.children[0]);
+          }
+
+          const item = document.createElement("div");
+          notifications.appendChild(item);
+          item.outerHTML = notificationHTML.replace(
+            "#{number}",
+            "#" + iterator
+          );
+          iterator += 1;
+
+          setTimeout(addItem, Math.random() * 4000);
         })();
       });
     </script>
 
     <style>
-      @keyframes grr {
-      	0% {transform: translateX(70px) scaleX(0);}
-      	25% {transform: translateX(0px) scaleX(1);}
-      	50% {transform: translateY(-75px) scaleX(1);}
-      	75% {transform: translateY(-150px) scaleX(1);}
-      	100% {transform: translateY(-225px) scaleX(1);}
+      @keyframes hiding-up {
+        0% {
+          transform: scaleX(0);
+        }
+        25% {
+          transform: scaleX(1);
+        }
+        90% {
+          height: 40px;
+          margin-top: 10px;
+          padding: 20px 0 0 10px;
+        }
+        100% {
+          height: 0px;
+          margin-top: 0px;
+					padding-top: 0;
+					padding-bottom: 0;
+        }
       }
-        @keyframes vrr {
-      	0% {transform: translateY(0px);}
-      	25% {transform: translateY(0px);}
-      	50% {transform: translateY(-75px);}
-      	75% {transform: translateY(-150px);}
-      	100% {transform: translateY(-225px);}
+      .notification {
+        padding: 20px 0 0 10px;
+        animation: hiding-up 3s forwards;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        width: 200px;
+        height: 40px;
+        margin-top: 10px;
+        box-shadow: 0px 0px 5px 0px grey;
       }
-      .notifications {
-    /*  	animation: vrr 9s;*/
-      }
-      div > div{  
-      	padding: 20px 0 0 10px;
-      	animation: grr 3s forwards;
-      	position: relative;
-  margin: 0;
-  width: 200px;
-  height: 40px;
-  margin-top: 10px;
-  border: 1px solid grey;}
     </style>
   </head>
   <body>

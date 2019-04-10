@@ -46,7 +46,9 @@ input {
   border: 1px solid #202020;
   font-size: 16px;
   color: #000000;
+  padding-left: 5px;
 }
+
 .tipe {
   font-size: 16px;
   color: #202020;
@@ -64,9 +66,26 @@ input {
   margin-left: 10px;
 }
 .click:hover {
+  border: 1px solid #2050A0;
+}
+.click:active {
+  border: 1px solid #103090;
+  color: #103090;
+}
+.click__submit {
+  width: 100px;
+  height: 24px;
+  border-radius: 5px;
   background-color: #3060e0;
-  color: #ffffff;
-  border: 0;
+  color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.click__submit:hover {
+  background-color: #2050A0;
+}
+.click__submit:active {
+  background-color: #103090;
 }
 .inputBlock {
   display: flex;

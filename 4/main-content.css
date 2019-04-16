@@ -1,0 +1,38 @@
+.tagline {
+  font-size: 16px;
+  color: #3060e0;
+  font-family: "Calibri";
+}
+.tagline__words {
+  padding-left: 10px;
+}
+.banner {
+  box-sizing: border-box;
+  width: 100%;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+a {
+  color: #3060e0;
+}
+a:hover {
+  color: #2050a0;
+  text-decoration: none;
+}
+a:active {
+  color: #103090;
+  text-decoration: none;
+}
+@media all and (max-width: 768px) {
+
+}
+@media all and (min-width: 768px) {
+  .tagline {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+}

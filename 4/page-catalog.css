@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  color: #3060e0;
+}
+a:hover {
+  color: #2050a0;
+  text-decoration: none;
+}
+a:active {
+  color: #103090;
+  text-decoration: none;
+}
+header {
+  border-bottom: 1px solid #202020;
+  display: flex;
+}
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  border-top: 1px solid #202020;
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.copyrigh {
+  padding: 10px 0 0 10px;
+  font-size: 12px;
+  color: #202020;
+  font-family: "Calibri";
+}
+.logosvg {
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.logo {
+  width: 192px;
+  height: 50px;
+  display: flex;
+}
+.BowShop {
+  font-size: 32px;
+  color: #202020;
+  font-family: "Calibri";
+  margin-left: 10px;
+  vertical-align: top;
+  align-self: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+}
+content {
+  flex-grow: 1;
+}
+
+@media all and (max-width: 768px) {
+  .list {
+    font-size: 0px;
+  }
+  header {
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+  }
+  .menu {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+  }
+  .navigation {
+    font-size: 0px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .BowShop {
+    align-items: center;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .sign-in {
+    background: url(sign-in.svg);
+    display: block;
+    height: 50px;
+  }
+  .sign-in-button {
+    align-self: flex-end;
+  }
+  .list {
+    padding-top: 10px;
+    font-size: 12px;
+    color: #3060e0;
+    font-family: "Calibri";
+  }
+  .list a {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #202020;
+    cursor: pointer;
+  }
+  .list a:first-child {
+    border-left: none;
+  }
+  header {
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+  }
+  .navigation {
+    list-style: none;
+    font-size: 16px;
+    color: #3060e0;
+    font-family: "Calibri";
+  }
+  .menu {
+    font-size: 0;
+  }
+  .button {
+    display: inline-block;
+    padding: 15px 15px;
+  }
+  .button:hover {
+    background-color: #f0f0f0;
+  }
+}

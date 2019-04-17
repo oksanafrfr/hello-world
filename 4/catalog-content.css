@@ -1,0 +1,142 @@
+.bows {
+  font-size: 32px;
+  color: #202020;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: "Calibri";
+}
+
+/*Products*/
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Pagination*/
+
+.pagination {
+  display: flex;
+
+  font-size: 16px;
+  font-family: "Calibri";
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+.pagination__button {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #202020;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #202020;
+}
+.pagination__button:hover {
+  border: 1px solid #2050a0;
+}
+.pagination__button:active {
+  border: 1px solid #103090;
+  color: #103090;
+}
+.back {
+  background: url(back.svg) no-repeat;
+  height: 15px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.back:hover {
+  background: url(back-hover.svg) no-repeat;
+}
+.back:active {
+  background: url(back-click.svg) no-repeat;
+}
+.next {
+  background: url(next.svg) no-repeat;
+  height: 15px;
+  margin-top: 3px;
+  margin-left: 4px;
+}
+.next:hover {
+  background: url(next-hover.svg) no-repeat;
+}
+.next:active {
+  background: url(next-click.svg) no-repeat;
+}
+
+/*Filter*/
+
+.filter {
+  width: 320px;
+  height: 414px;
+  box-shadow: 0px -3px 7px rgba(0,0,0,0.16);
+  background-color: #ffffff;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.filter__title {
+  font-size: 20px;
+  color: #202020;
+  font-family: "Segoe UI";
+
+}
+.filter__string {
+  display: flex;
+  font-size: 16px;
+  color: #202020;
+  font-family: "Calibri";
+  margin-top: 10px;
+}
+.filter__cleckbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #202020;
+  margin-right: 10px;
+}
+.filter__cleckbox:hover {
+  border: 1px solid #2050a0;
+}
+.filter__cleckbox:active {
+  border: 1px solid #2050a0;
+}
+.filter__cleckbox-active {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #3060e0;
+  margin-right: 10px;
+}
+.filter__cleckbox-active:hover {
+    background-color: #2050a0;
+}
+.filter__cleckbox-active:active {
+    background-color: #2050a0;
+}
+
+
+
+@media all and (max-width: 768px) {
+  content {
+    display: flex;
+    flex-direction: column;
+  }
+  .pagination {
+      justify-content: center;
+  }
+  .filter {
+    width: 100%;
+  }
+}
+
+
+@media all and (min-width: 768px) {
+
+}

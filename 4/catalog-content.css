@@ -12,6 +12,7 @@
 .products {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   margin: 0 -10px;
 }
@@ -34,7 +35,7 @@
   text-align: center;
   margin-top: 10px;
   margin-bottom: 20px;
-  justify-content: flex-end;
+
 }
 .pagination__button {
   width: 24px;
@@ -58,32 +59,32 @@
   color: #103090;
 }
 .pagination__button--back {
-  background: url(back.svg) no-repeat;
+  background: url(back.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
 .pagination__button--back:hover {
-  background: url(back-hover.svg) no-repeat;
+  background: url(back-hover.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
 .pagination__button--back:active {
-  background: url(back-click.svg) no-repeat;
+  background: url(back-click.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
 .pagination__button--next {
-  background: url(next.svg) no-repeat;
+  background: url(next.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
 .pagination__button--next:hover {
-  background: url(next-hover.svg) no-repeat;
+  background: url(next-hover.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
 .pagination__button--next:active {
-  background: url(next-click.svg) no-repeat;
+  background: url(next-click.svg) #f0f0f0 no-repeat;
   background-size: 15px;
   background-position: center center;
 }
@@ -123,6 +124,11 @@
   margin-top: 10px;
 }
 .filter__cleckbox {
+  display: none;
+}
+.filter__input:before {
+  content: ' ';
+  position: absolute;
   min-width: 24px;
   height: 24px;
   border-radius: 5px;
@@ -156,7 +162,7 @@
     flex-direction: column;
   }
   .pagination {
-    justify-content: center;
+    align-self: center;
   }
   .filter {
     width: 100%;
@@ -176,3 +182,4 @@
     padding-right: 20px;
   }
 }
+

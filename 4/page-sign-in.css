@@ -31,55 +31,96 @@ footer {
   font-size: 12px;
   color: #202020;
 }
-.BowShop {
-  align-self: center;
-  }
-}
+
 .button {
   display: inline-block;
   padding: 15px 15px;
+  width: 100%;
+  text-align: center;
 }
 .button:hover {
   background-color: #f0f0f0;
 }
-.BowShop {
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+/*HEADER*/
+/*LOGO*/
+.logo {
+  width: 192px;
+  height: 50px;
+  display: flex;
+}
+.logo:hover {
+  background-color: #f0f0f0;
+  color: #3060e0;
+}
+.logo:active {
+  background-color: rgba(0,0,0,0.25);
+}
+.logo__photo {
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.logo__text {
   font-size: 32px;
   color: #202020;
   margin-left: 10px;
   vertical-align: top;
   align-self: center;
 }
+
+.sign {
+  display: flex;
+  width: 100%;
+}
+.sign__text {
+  padding-right: 55px;
+}
+.sign::before {
+  content: "";
+  width: 100%;
+  width: 50px;
+  background-image: url(sign-in.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sign:hover::before {
+  background-image: url(sign-in-hover.svg);
+    background-color: #f0f0f0;
+}
+.sign:active::before {
+  background-image: url(sign-in-click.svg);
+}
+.cart {
+  display: flex;
+  width: 100%;
+}
+.cart__text {
+  padding-right: 55px;
+}
+.cart::before {
+  content: "";
+  width: 100%;
+  width: 50px;
+  background-image: url(cart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cart:hover::before {
+  background-image: url(cart-hover.svg);
+    background-color: #f0f0f0;
+}
+.cart:active::before {
+  background-image: url(cart-click.svg);
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
-}
-.logosvg {
-  height: 40px;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-.logo {
-  width: 192px;
-  height: 50px;
-  display: flex;
-}
-.link {
-  font-size: 40px;
-  color: #3060e0;
-  cursor: pointer;
-}
-.link:hover {
-  color: #2050a0;
-}
-.link:active {
-  color: #103090;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-.flex {
-  display: flex;
 }
 summary::-webkit-details-marker {
   display: none;
@@ -99,11 +140,14 @@ summary::-webkit-details-marker {
     width: 100%;
     padding: 10px 0;
   }
-  .BowShop {
-    align-items: center;
+  .logo {
+    width: 100%;
   }
-  .flex {
-    flex-direction: column;
+  .logo__text {
+    align-items: center;
+    margin-right: 50px;
+    width: 100%;
+    text-align: center;
   }
   .navigation {
     display: flex;
@@ -112,7 +156,8 @@ summary::-webkit-details-marker {
     left: 0;
     right: 0;
   }
-  .nav {
+
+  .navigation__all {
     display: flex;
     flex-direction: column;
   }
@@ -127,6 +172,10 @@ summary::-webkit-details-marker {
   }
   .open {
     open=""
+  }
+  .navigation__part {
+    display: flex;
+    flex-direction: column;
   }
   .allNavigation {
     position: absolute;
@@ -158,10 +207,28 @@ summary::-webkit-details-marker {
   header {
     width: 100%;
     height: 50px;
-    justify-content: space-between;
     border-bottom: 1px solid #202020;
+  }
+  .menu {
+    width: 0px;
+    font-size: 0px;
   }
   .navigation {
     font-size: 16px;
     color: #3060e0;
+    display: flex;
+    width: 100%;
   }
+  .navigation__part {
+    display: flex;
+  }
+  .navigation__all {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .open {
+    open="";
+    width: 100%;
+  }
+}

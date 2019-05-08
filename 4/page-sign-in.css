@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Calibri", "Arial", serif;
+  font-family: "Calibri", "Arial", sans-serif;
 }
 a {
   color: #3060e0;
@@ -37,6 +37,7 @@ footer {
   padding: 15px 15px;
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 .button:hover {
   background-color: #f0f0f0;
@@ -59,6 +60,7 @@ footer {
 }
 .logo:active {
   background-color: rgba(0,0,0,0.25);
+  color: #2050A0;
 }
 .logo__photo {
   height: 40px;
@@ -67,7 +69,6 @@ footer {
 }
 .logo__text {
   font-size: 32px;
-  color: #202020;
   margin-left: 10px;
   vertical-align: top;
   align-self: center;
@@ -77,20 +78,23 @@ footer {
   display: flex;
   width: 100%;
 }
-.sign__text {
-  padding-right: 55px;
+.sign:hover {
+  background-color: #f0f0f0;
 }
+
 .sign::before {
   content: "";
   width: 100%;
   width: 50px;
+  height: 50px;
   background-image: url(sign-in.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 50px 50px;
 }
 .sign:hover::before {
   background-image: url(sign-in-hover.svg);
-    background-color: #f0f0f0;
+
 }
 .sign:active::before {
   background-image: url(sign-in-click.svg);
@@ -99,34 +103,46 @@ footer {
   display: flex;
   width: 100%;
 }
-.cart__text {
-  padding-right: 55px;
+.cart:hover {
+  background-color: #f0f0f0;
 }
+
 .cart::before {
   content: "";
   width: 100%;
   width: 50px;
+  height: 50px;
   background-image: url(cart.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 35px;
 }
 .cart:hover::before {
   background-image: url(cart-hover.svg);
-    background-color: #f0f0f0;
+
 }
 .cart:active::before {
   background-image: url(cart-click.svg);
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
 summary::-webkit-details-marker {
   display: none;
 }
 
 @media all and (max-width: 768px) {
+
+  .navigation__all {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: white;
+  }
+  .menu:hover + .navigation__all,
+  .navigation__all:hover {
+    display: flex;
+  }
+
   .list {
     font-size: 0px;
   }
@@ -135,10 +151,18 @@ summary::-webkit-details-marker {
     box-sizing: border-box;
     flex-direction: column;
   }
+
   .menu {
     text-align: center;
     width: 100%;
     padding: 10px 0;
+    text-decoration: underline;
+    color: #3060E0;
+  }
+  .menu:active {
+    color: #202020;
+    text-decoration: none;
+    background-color: #F0F0F0;
   }
   .logo {
     width: 100%;
@@ -155,10 +179,10 @@ summary::-webkit-details-marker {
     background: white;
     left: 0;
     right: 0;
+
   }
 
   .navigation__all {
-    display: flex;
     flex-direction: column;
   }
   .navigation > a {
@@ -177,10 +201,12 @@ summary::-webkit-details-marker {
     display: flex;
     flex-direction: column;
   }
-  .allNavigation {
-    position: absolute;
-    left: 0px;
-    right: 0px;
+  .cart__text {
+    padding-right: 55px;
+    padding: none;
+  }
+  .sign__text {
+    padding-right: 55px;
   }
 }
 
@@ -226,6 +252,11 @@ summary::-webkit-details-marker {
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+  .cart__text {
+    width: 0px;
+    font-size: 0px;
+
   }
   .open {
     open="";

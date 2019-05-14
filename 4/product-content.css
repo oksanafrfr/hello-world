@@ -1,0 +1,124 @@
+footer {
+  margin-top: 20px;
+}
+.click {
+  width: 200px;
+  height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3060e0;
+  font-size: 16px;
+  color: #f0f0f0;
+  border: none;
+  padding-top: 3px;
+  margin-top: 20px;
+  align-self: flex-end;
+  box-sizing: border-box;
+}
+.click:hover {
+  background-color: #2050a0;
+  color: #ffffff;
+}
+.click:active {
+  background-color: #103090;
+}
+.mainpart {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.mainpart__text-cost {
+  display: flex;
+  justify-content: space-between;
+}
+.mainpart__text-input {
+    width: 44px;
+  height: 24px;
+  border-radius: 5px;
+  border: 1px solid #202020;
+  padding-top: 2px;
+  padding-left: 10px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+.mainpart__text-string {
+  display: flex;
+}
+.mainpart__text-quantity {
+  font-weight: bold;
+}
+
+img {
+  height: 300px;
+}
+.product__name {
+  font-size: 32px;
+color: #202020;
+}
+.characteristic {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.characteristic__string {
+  display: flex;
+  align-items: stretch;
+  align-content: space-between;
+}
+.string_even {
+  background-color: #f0f0f0;
+}
+.characteristic__string-name {
+  font-weight: bold;
+  width: 300px;
+  padding-left: 5px;
+}
+.string-2 {
+  align-self: center;
+}
+.description {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.description__name {
+  font-size: 24px;
+  color: #202020;
+}
+@media all and (max-width: 768px) {
+  content {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainpart {
+    flex-direction: column;
+  }
+  .product__photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  .mainpart__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.click {
+  width: 100%;
+}
+}
+@media all and (min-width: 768px) {
+.product__photo {
+width: 50%;
+height: 300px;
+display: flex;
+justify-content: center;
+}
+.mainpart__text {
+  display: flex;
+flex-direction: column;
+width: 50%;
+}
+}

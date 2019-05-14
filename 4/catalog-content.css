@@ -1,0 +1,201 @@
+.bows {
+  font-size: 32px;
+  color: #202020;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-family: "Calibri";
+  width: 100%;
+}
+
+/*Products*/
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 -10px;
+}
+.products-and-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 680px;
+  margin: 0 auto;
+}
+/*Pagination*/
+
+.pagination {
+  display: flex;
+  right: 0px;
+  font-size: 16px;
+  font-family: "Calibri";
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.pagination__button {
+  text-decoration: none;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-top: 2px;
+  background-color: #f0f0f0;
+  border: 1px solid #202020;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #202020;
+}
+.pagination__button:last-child {
+  margin-right: 0px;
+}
+.pagination__button:hover {
+  border: 1px solid #2050a0;
+}
+.pagination__button:active {
+  border: 1px solid #103090;
+  color: #103090;
+}
+.pagination__button--back {
+  background: url(back.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.pagination__button--back:hover {
+  background: url(back-hover.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.pagination__button--back:active {
+  background: url(back-click.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.pagination__button--next {
+  background: url(next.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.pagination__button--next:hover {
+  background: url(next-hover.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.pagination__button--next:active {
+  background: url(next-click.svg) #f0f0f0 no-repeat;
+  background-size: 15px;
+  background-position: center center;
+}
+.next {
+  background: url(next.svg) no-repeat;
+  height: 15px;
+  margin-top: 3px;
+  margin-left: 4px;
+}
+.next:hover {
+  background: url(next-hover.svg) no-repeat;
+}
+.next:active {
+  background: url(next-click.svg) no-repeat;
+}
+
+/*Filter*/
+
+.filter {
+  height: 414px;
+  box-shadow: 0px -3px 7px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.filter__title {
+  font-size: 20px;
+  color: #202020;
+  font-family: "Segoe UI";
+  padding-top: 10px;
+}
+.filter__string {
+  display: flex;
+  font-size: 16px;
+  color: #202020;
+  font-family: "Calibri";
+  margin-top: 10px;
+}
+.filter__cleckbox {
+  display: none;
+}
+.filter__input {
+  display: flex;
+  align-items: center;
+}
+.filter__input::before {
+  content: "";
+  vertical-align: middle;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  border: 1px solid #202020;
+  margin-right: 10px;
+}
+.filter__input:hover::before {
+  border: 1px solid #2050a0;
+  color: #2050a0;
+}
+.filter__input:hover {
+  color: #2050a0;
+}
+.filter__input:active::before {
+  border: 1px solid #103090;
+}
+.filter__input:active {
+  color: #202020;
+}
+.filter__cleckbox:checked + .filter__input::before {
+  background-image: url(check.svg);
+  background-color: #2050a0;
+  border: 1px solid #2050a0;
+}
+.filter__cleckbox:checked + .filter__input:hover::before {
+  background-color: #2050a0;
+}
+.filter__cleckbox:checked + .filter__input:hover {
+  color: #2050a0;
+}
+.filter__cleckbox:checked + .filter__input:active {
+  color: #202020;
+}
+
+@media all and (max-width: 768px) {
+  content {
+    display: flex;
+    flex-direction: column;
+  }
+  .pagination {
+    align-self: center;
+  }
+  .filter {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media all and (min-width: 768px) {
+  content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filter {
+    margin-top: 10px;
+    left: 0px;
+    width: 220px;
+    padding-right: 20px;
+  }
+}

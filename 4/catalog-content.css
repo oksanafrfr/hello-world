@@ -3,7 +3,6 @@
   color: #202020;
   padding-top: 20px;
   padding-left: 20px;
-  font-family: "Calibri";
   width: 100%;
 }
 
@@ -30,7 +29,6 @@
   display: flex;
   right: 0px;
   font-size: 16px;
-  font-family: "Calibri";
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
@@ -114,14 +112,12 @@
 .filter__title {
   font-size: 20px;
   color: #202020;
-  font-family: "Segoe UI";
   padding-top: 10px;
 }
 .filter__string {
   display: flex;
   font-size: 16px;
   color: #202020;
-  font-family: "Calibri";
   margin-top: 10px;
 }
 .filter__cleckbox {

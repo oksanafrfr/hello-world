@@ -5,7 +5,6 @@
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 20px;
-
 }
 .product__photo {
   width: 150px;
@@ -17,7 +16,6 @@
   background-color: #202020;
   font-size: 12px;
   color: #f0f0f0;
-  font-family: "Calibri";
   text-align: center;
   position: relative;
   left: 95px;
@@ -42,7 +40,6 @@ a:active {
   font-size: 16px;
   color: #f0f0f0;
   border: none;
-  font-family: "Calibri";
   margin-top: 10px;
 }
 .click:hover {

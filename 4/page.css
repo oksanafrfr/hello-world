@@ -38,10 +38,13 @@ footer {
 }
 .cart__order {
   border-radius: 50%;
-  background-color: blue;
-  color: white;
+  background-color: #3060e0;
+  color: #f0f0f0;
   min-width: 20px;
   height: 20px;
+  font-size: 14px;
+  padding-top: 2px;
+  box-sizing: border-box;
   text-align: center;
   position: relative;
   right: 15px;
@@ -65,7 +68,6 @@ footer {
 /*HEADER*/
 /*LOGO*/
 .logo {
-  width: 192px;
   height: 50px;
   display: flex;
 }
@@ -74,8 +76,8 @@ footer {
   color: #3060e0;
 }
 .logo:active {
-  background-color: rgba(0,0,0,0.25);
-  color: #2050A0;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #2050a0;
 }
 .logo__photo {
   height: 40px;
@@ -109,7 +111,6 @@ footer {
 }
 .sign:hover::before {
   background-image: url(sign-in-hover.svg);
-
 }
 .sign:active::before {
   background-image: url(sign-in-click.svg);
@@ -117,7 +118,6 @@ footer {
 .cart {
   display: flex;
   width: 100%;
-
 }
 .cart:hover {
   background-color: #f0f0f0;
@@ -135,7 +135,6 @@ footer {
 }
 .cart:hover::before {
   background-image: url(cart-hover.svg);
-
 }
 .cart:active::before {
   background-image: url(cart-click.svg);
@@ -143,15 +142,15 @@ footer {
 
 @media all and (max-width: 768px) {
   .button-cart {
-  display: inline-block;
-  padding: 15px 15px;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-}
-.button-cart:hover {
-  background-color: #f0f0f0;
-}
+    display: inline-block;
+    padding: 15px 15px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .button-cart:hover {
+    background-color: #f0f0f0;
+  }
   .navigation__all {
     display: none;
     position: absolute;
@@ -183,12 +182,12 @@ footer {
     width: 100%;
     padding: 10px 0;
     text-decoration: underline;
-    color: #3060E0;
+    color: #3060e0;
   }
   .menu:hover {
     color: #202020;
     text-decoration: none;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
   }
   .logo {
     width: 100%;
@@ -205,7 +204,6 @@ footer {
     background: white;
     left: 0;
     right: 0;
-
   }
 
   .navigation__all {
@@ -234,15 +232,15 @@ footer {
 }
 
 @media all and (min-width: 768px) {
-    .button-cart {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-}
-.button-cart:hover {
-  background-color: #f0f0f0;
-}
+  .button-cart {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .button-cart:hover {
+    background-color: #f0f0f0;
+  }
   .sign-in {
     background: url(sign-in.svg);
     display: block;
@@ -288,13 +286,15 @@ footer {
   .cart__text {
     width: 0px;
     font-size: 0px;
-
   }
   .open {
     width: 100%;
   }
+  .logo {
+    width: 200px;
+  }
   .logo__text {
-    padding-right: 5px;
+    padding-right: 10px;
   }
   .cart {
     width: 60px;

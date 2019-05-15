@@ -1,7 +1,6 @@
 .tagline {
   font-size: 16px;
   color: #3060e0;
-  font-family: "Calibri";
   padding-bottom: 20px;
 }
 .tagline__words {
@@ -28,12 +27,11 @@ a:active {
   text-decoration: none;
 }
 @media all and (max-width: 768px) {
-
 }
 @media all and (min-width: 768px) {
   .tagline {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-}
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
 }
